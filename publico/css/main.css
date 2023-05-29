@@ -1,0 +1,113 @@
+body {
+  background-color:  #D3D3D3;
+  height: 100%;
+}
+
+#form-cadastro {
+  border-radius: 20px;
+}
+
+img {
+  height: 250px;
+  width: 350px;
+}
+
+.site {
+  width: 800px;
+}
+
+.margin-bottom {
+  margin-bottom: 1em;
+}
+
+.margin-right {
+  margin-right: 1em;
+}
+
+.campo-grande {
+  width: 550px!important;
+}
+
+.imagem-usuario {
+  width: 5em;
+  margin-right: 1em;
+}
+
+
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  position: relative;
+  float: left;
+  margin-right: 20px;
+}
+
+.login {
+  align-items: center;
+}
+
+.texto {
+  font-size: 25px !important;
+}
+
+.login a {
+  display: inline-block;
+width: 80px;
+height: 40px;
+  background-color: #4CAF50;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #4CAF50;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.login a:hover {
+  background-color: #fff;
+  color: #4CAF50;
+}
+
+nav {
+  position: relative;
+  z-index: 9999;
+}
+
+nav a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#cadastro {
+  background-color: white;
+  border-radius: 20px;
+}
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+}
+
+nav ul ul li {
+  float: none;
+  width: 200px;
+}
+
+nav ul ul a {
+  padding: 10px;
+  color: #fff;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
