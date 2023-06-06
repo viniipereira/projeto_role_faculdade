@@ -4,9 +4,9 @@ namespace Teste\Funcional;
 use \Teste\Teste;
 use \Framework\DW3BancoDeDados;
 
-class TesteUsuario extends Teste
+class TesteRelatorio extends Teste
 {
-    public function testeLogin()
+    public function testeGet()
     {
         $logar = $this->post(URL_RAIZ . 'login', [
             'email' => 'teste@teste.com',
@@ -14,6 +14,9 @@ class TesteUsuario extends Teste
         ]);
 
         $this->verificarRedirecionar($logar, URL_RAIZ . 'roles');
+        
+        $pagina = $this->get(URL_RAIZ . 'relatorio');
 
+        $this->verificarContem($pagina,'Relatório');
     }
 }

@@ -25,4 +25,34 @@ class TesteRoles extends Teste
 
         $this->verificar(count($bdCidades) == 4);
     }
+
+    public function testeGet()
+    {
+        $logar = $this->post(URL_RAIZ . 'login', [
+            'email' => 'teste@teste.com',
+            'senha' => '123',
+        ]);
+
+       $pagina = $this->get(URL_RAIZ . 'cadastrar/role');
+
+
+
+       $this->verificarContem($pagina,'Cadastro de Rôles');
+
+    }
+
+    public function testeDelete()
+    {
+        $logar = $this->post(URL_RAIZ . 'login', [
+            'email' => 'teste@teste.com',
+            'senha' => '123',
+        ]);
+
+        $delete =$this->post(URL_RAIZ . 'deletar/role', [
+            'role_id' => 1,
+        ]);
+
+       $this->verificarContem($delete,'Sucesso');
+
+    }
 }

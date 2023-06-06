@@ -20,7 +20,7 @@ class ControladorUsuario extends Controlador
 
         if ($usuario->isValido()) {
             $usuario->salvar();
-            $this->redirecionar(URL_RAIZ . 'usuarios/sucesso');
+            $this->visao('login/sucesso.php');
 
         } else {
 

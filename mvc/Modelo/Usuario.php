@@ -8,7 +8,7 @@ use \Framework\DW3ImagemUpload;
 class Usuario extends Modelo
 {
     const BUSCAR_POR_EMAIL = 'SELECT * FROM usuarios WHERE email = ? LIMIT 1';
-    const INSERIR = 'INSERT INTO usuarios(email,senha,nome,foto) VALUES (?, ?, ?, ?)';
+    const INSERIR = 'INSERT INTO usuarios(email,senha,nome) VALUES (?, ?, ?)';
     private $id;
     private $email;
     private $senha;
@@ -86,7 +86,6 @@ class Usuario extends Modelo
         $comando->bindValue(1, $this->email, PDO::PARAM_STR);
         $comando->bindValue(2, $this->senha, PDO::PARAM_STR);
         $comando->bindValue(3, $this->nome, PDO::PARAM_STR);
-        $comando->bindValue(4, $this->foto, PDO::PARAM_STR);
         $comando->execute();
         $this->id = DW3BancoDeDados::getPdo()->lastInsertId();
         DW3BancoDeDados::getPdo()->commit();

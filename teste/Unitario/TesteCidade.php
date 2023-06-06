@@ -15,4 +15,10 @@ class TesteCidade extends Teste
         $bdCidade = $query->fetch();
         $this->verificar($bdCidade['quantidade'] == 1);
     }
+    public function testeBuscarTodas()
+    {
+        $query = DW3BancoDeDados::query("SELECT count(*)  as quantidade FROM cidade");
+        $bdCidade = $query->fetch();
+        $this->verificar($bdCidade['quantidade'] == 3);
+    }
 }
